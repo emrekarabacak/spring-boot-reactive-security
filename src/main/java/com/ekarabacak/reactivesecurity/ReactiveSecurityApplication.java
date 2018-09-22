@@ -26,7 +26,7 @@ public class ReactiveSecurityApplication {
             roleSet.add(Role.USER);
 
             User user1 = new User(null,"emre","123",roleSet);
-            User user2 = new User(null,"emre","123",roleSet);
+            User user2 = new User(null,"elif","123",roleSet);
 
 
             userRepository.deleteAll()

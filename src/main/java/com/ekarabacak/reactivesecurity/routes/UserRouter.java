@@ -15,6 +15,7 @@ public class UserRouter {
     @Bean
     public RouterFunction<ServerResponse> userRoutes(UserHandler userHandler){
         return RouterFunctions.route(GET("/"), userHandler::findAllUsers)
+                .andRoute(GET("/principal"),userHandler::getPrincipal)
                 .andRoute(GET("/{id}"),userHandler::findUser)
                 .andRoute(POST("/"),userHandler::createUser)
                 .andRoute(PUT("/{id}"),userHandler::updateUser)
